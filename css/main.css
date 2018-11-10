@@ -1,3 +1,10 @@
+/* CSS COMPLETED */
+
+body {
+    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png)
+  }
+  
+
 /*CIRCLE, SEGMENTS AND GAME MAIN BODY*/
 
 #outer-circle {
@@ -104,3 +111,64 @@
 /*CIRCLE AND MAIN BODY COMPLETE
 
 SWITCHES AND COUNTER BELOW*/
+
+.toggle {
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.button {
+    border-radius: 50% !important;
+    font-size: 1.5em;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#switches {
+    position: absolute;
+    font-family: "Lobster", cursive;
+    margin-left: 26px;
+    margin-top: 110px;
+}
+
+.text2 {
+    position: absolute;
+    font-family: "Lobster", cursive;
+    margin-left: 89px;
+    margin-top: 197px;
+}
+
+.text1 {
+    position: absolute;
+    font-family: "Lobster", cursive;
+    margin-left: 23px;
+    margin-top: 142px;
+}
+
+.text1 span:last-child {
+    margin-left: 80px;
+}
+
+#title {
+    position: absolute;
+    font-family: "Lobster", cursive;
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: 40px; 
+}
+
+#turn {
+    position: absolute;
+    background: #330000;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    height: 30px;
+    width: 50px;
+    margin-left: 90px;
+    margin-top: 170px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+}
