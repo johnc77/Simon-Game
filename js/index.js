@@ -236,3 +236,10 @@ function winGame () {
     on = false;
     win = true;
 }
+
+/* SETTINGS MENU FUNCTIONS */
+
+function toggleMenu(){
+    console.log("bollocks");
+    
+}

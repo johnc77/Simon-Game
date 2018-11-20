@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 <!-- In the original code the source tag has a closing tag-->
     <audio id="clip1">
         <source src="media/audio/simonSound1.mp3">
@@ -36,12 +38,27 @@
 </head>
 
 <body>
+
     <div class="settings">
+
         <div class="settings-header">
-            <span class = "icon">+</span><span class = "settings-title">Settings</span>
+            <span class = "icon" onclick="toggleMenu()"><i class="fas fa-cog"></i></span><span class = "settings-title">Settings</span>
         </div>
-        <div class="settings-options"></div>
+
+        <div class="settings-options">
+            <span class="name">Change Name</span>
+            <span class=""><i class="fas fa-bars nameIcon" onclick="toggleMenu()"></i></span>
+
+            <span class="theme">Change Theme</span>
+            <span class=""><i class="fas fa-bars themeIcon" onclick="toggleMenu()"></i></span>
+
+            <span class="sound">Sound Effects</span>
+            <span class="soundIcon"><input type="checkbox"></span>
+
+        </div>
     </div>
+
+
     <div id="outer-circle">
         <div id="topleft"></div>
         <div id="topright"></div>

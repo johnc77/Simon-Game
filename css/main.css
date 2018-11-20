@@ -173,34 +173,59 @@ SWITCHES AND COUNTER BELOW*/
     line-height: 30px;
 }
 
-.settings-header {
-    background-color: rgba(255, 255, 255, 0.4);
+/* SETTINGS MENU  */
+
+.settings {
     width: 20%;
-    height: 30px;
+    float: left;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: 35px;
     margin-top: 20px;
     margin-left: 10px;
     font-size: 1.5em;
     border-radius: 5px;
 }
 
+.settings-title {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.icon {
+    margin: auto 10px auto 20px;
+    cursor: pointer;
+}
+
+/* HIDDEN MENU STYLING */
+
 .settings-options {
-    width: 20%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 100%;
     height: 200px;
     background-color: rgba(255, 255, 255, 0.4);
     margin-left: 10px;
-    display: none;
-    
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 20px;
 }
 
-.settings {
-    position: relative;
+.name, .theme, .sound {
+    padding-left: 20px;
+    height: 30px;
 }
 
-.settings-title {
-    position: absolute;
-    left: 50px;
-}
-.icon {
-    position: absolute;
-    margin-left: 10px;
+
+/* MENU ICON STYLING */
+
+.nameIcon, .themeIcon {
+    cursor: pointer;
 }
