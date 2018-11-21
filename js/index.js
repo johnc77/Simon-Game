@@ -252,3 +252,12 @@ function toggleMenu(){
         head.className = 'settings-header';
     }
 };
+
+/* CHANGE NAME MODAL */
+
+let modal = document.getElementById('simple-modal');
+
+function toggleNameModal() {
+    modal.style.display = "block";
+    
+}
