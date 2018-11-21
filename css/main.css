@@ -1,7 +1,11 @@
 /* CSS COMPLETED */
 
 body {
-    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png)
+    /* background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png) */
+
+    background-image: url(../media/themes/spooky.jpg);
+    background-position: center;
+    background-size: cover;
   }
   
 
@@ -268,7 +272,7 @@ SWITCHES AND COUNTER BELOW*/
     cursor: pointer;
 }
 
-/* MODAL STYLING */
+/* NAME MODAL STYLING */
 
 .modal{
     display: none;
@@ -297,6 +301,55 @@ SWITCHES AND COUNTER BELOW*/
 }
 
 .closeBtn:hover, .closeBtn:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* THEME MODAL STYLING */
+
+.themeModal{
+    /* display: none; */
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 10px 20px 20px 20px;
+    width: 30%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.theme-modal-content ul{
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+.theme-modal-content ul li span{
+    cursor: pointer;
+}
+
+.themecloseBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    align-self: flex-end;
+}
+
+.themecloseBtn:hover, .themecloseBtn:focus {
     color: #000000;
     text-decoration: none;
     cursor: pointer;

@@ -38,13 +38,28 @@
 </head>
 
 <body>
+    <!-- MODALS FOR SETTINGS -->
     <div id="simple-modal" class="modal">
         <div class="modal-content">
-            <span class="closeBtn">&times;</span>
+            <span class="closeBtn" onclick="closeNameModal()">&times;</span>
             <p>Hello Im a modal</p>
         </div>
-
     </div>
+
+
+    <div id="theme-modal" class="themeModal">
+            <div class="theme-modal-content">
+                <span class="themecloseBtn" onclick="closeThemeModal()">&times;</span>
+                <ul>
+                    <li><span>Christmas</span></li>
+                    <li><span onclick="setSpookyTheme()">Spooky</span></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
     <div class="settings">
 
         <div class="settings-header" id="header">
@@ -56,7 +71,7 @@
             <span class=""><i class="fas fa-bars nameIcon" onclick="toggleNameModal()"></i></span>
 
             <span class="theme">Change Theme</span>
-            <span class=""><i class="fas fa-bars themeIcon" onclick="toggleMenu()"></i></span>
+            <span class=""><i class="fas fa-bars themeIcon" onclick="toggleThemeModal()"></i></span>
 
             <span class="sound">Sound Effects</span>
             <span class="soundIcon"><input type="checkbox"></span>

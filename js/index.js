@@ -259,5 +259,26 @@ let modal = document.getElementById('simple-modal');
 
 function toggleNameModal() {
     modal.style.display = "block";
+}
+
+function closeNameModal() {
+    modal.style.display = 'none';
+}
+
+/* THEMES MODAL */
+
+let themeModal = document.getElementById('theme-modal');
+
+function toggleThemeModal() {
+    themeModal.style.display = 'block';
+};
+
+function closeThemeModal() {
+    themeModal.style.display = 'none';
+}
+
+/* SET THEMES */
+
+function setSpookyTheme() {
     
 }
