@@ -238,8 +238,17 @@ function winGame () {
 }
 
 /* SETTINGS MENU FUNCTIONS */
+let head = document.getElementById('header');
+let content = document.getElementById('settings-menu');
 
 function toggleMenu(){
-    console.log("bollocks");
-    
-}
+    if (content.className == 'settings-options') {
+        //OPEN MENU
+        content.className = 'settings-options-open';
+        head.className = 'settings-header-open';
+    } else {
+        //CLOSE MENU
+        content.className = 'settings-options';
+        head.className = 'settings-header';
+    }
+};
