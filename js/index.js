@@ -279,6 +279,19 @@ function closeThemeModal() {
 
 /* SET THEMES */
 
+let body = document.getElementById('themeBackground');
+
 function setSpookyTheme() {
-    
+    body.className = 'spooky';    
+    closeThemeModal();
+}
+
+function setRegularTheme() {
+    body.className = 'regular';    
+    closeThemeModal();
+}
+
+function setChristmasTheme() {
+    body.className = 'christmas';    
+    closeThemeModal();
 }

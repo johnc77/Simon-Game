@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body class="regular" id="themeBackground">
     <!-- MODALS FOR SETTINGS -->
     <div id="simple-modal" class="modal">
         <div class="modal-content">
@@ -51,8 +51,9 @@
             <div class="theme-modal-content">
                 <span class="themecloseBtn" onclick="closeThemeModal()">&times;</span>
                 <ul>
-                    <li><span>Christmas</span></li>
+                    <li><span onclick="setChristmasTheme()">Christmas</span></li>
                     <li><span onclick="setSpookyTheme()">Spooky</span></li>
+                    <li><span onclick="setRegularTheme()">Regular</span></li>
                 </ul>
             </div>
         </div>
@@ -73,8 +74,15 @@
             <span class="theme">Change Theme</span>
             <span class=""><i class="fas fa-bars themeIcon" onclick="toggleThemeModal()"></i></span>
 
+
             <span class="sound">Sound Effects</span>
-            <span class="soundIcon"><input type="checkbox"></span>
+
+            <span class="mylabel">
+                <input type="checkbox" id="sounds">
+                <div class="slidingGrove"></div>
+                <label for="sounds" name="slider" class="mylabel"></label>
+            </span>
+
 
         </div>
     </div>

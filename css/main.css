@@ -1,13 +1,20 @@
 /* CSS COMPLETED */
 
-body {
-    /* background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png) */
+.regular {
+    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png)
+}
 
+.spooky{
     background-image: url(../media/themes/spooky.jpg);
     background-position: center;
     background-size: cover;
   }
-  
+
+  .christmas{
+    background-image: url(../media/themes/christmas.jpg);
+    background-position: center;
+    background-size: cover;
+  }
 
 /*CIRCLE, SEGMENTS AND GAME MAIN BODY*/
 
@@ -190,7 +197,6 @@ SWITCHES AND COUNTER BELOW*/
     background-color: rgba(255, 255, 255, 0.4);
     width: 100%;
     height: 35px;
-    margin-top: 20px;
     margin-left: 10px;
     font-size: 1.5em;
     border-top-left-radius: 5px;
@@ -205,7 +211,6 @@ SWITCHES AND COUNTER BELOW*/
     background-color: rgba(255, 255, 255, 0.4);
     width: 100%;
     height: 35px;
-    margin-top: 20px;
     margin-left: 10px;
     font-size: 1.5em;
     border-top-left-radius: 5px;
@@ -246,6 +251,8 @@ SWITCHES AND COUNTER BELOW*/
 
 .settings-options-open {
     display: grid;
+    align-items: center;
+    justify-items: center;
     grid-template-columns: 4fr 1fr;
     width: 100%;
     max-height: 200px;
@@ -253,7 +260,7 @@ SWITCHES AND COUNTER BELOW*/
     margin-left: 10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding-top: 20px;
+    padding-top: 10px;
     z-index: 1;
     transition: max-height padding-top 0.9s;
     -moz-transition: max-height padding-top 0.9s;
@@ -261,8 +268,10 @@ SWITCHES AND COUNTER BELOW*/
 }
 
 .name, .theme, .sound {
-    padding-left: 20px;
-    height: 30px;
+    padding: 5px 0 5px 20px;
+    /* height: 30px; */
+    justify-self: start;
+    align-self: center;
 }
 
 
@@ -270,6 +279,8 @@ SWITCHES AND COUNTER BELOW*/
 
 .nameIcon, .themeIcon {
     cursor: pointer;
+    /* justify-self: center
+    align-self: center; */
 }
 
 /* NAME MODAL STYLING */
@@ -309,7 +320,7 @@ SWITCHES AND COUNTER BELOW*/
 /* THEME MODAL STYLING */
 
 .themeModal{
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 2;
     left: 0;
@@ -353,4 +364,50 @@ SWITCHES AND COUNTER BELOW*/
     color: #000000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* SLIDER BUTTON STYLING */
+
+.mylabel {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    /* margin-bottom: 15px; */
+}
+
+
+.mylabel input {
+    display: none;
+}
+
+.slidingGrove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ababab;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.slidingGrove::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+input:checked + .slidingGrove{
+    background: #5fc580;
+}
+
+input:checked + .slidingGrove::after{
+    transform: translateX(20px);
 }
