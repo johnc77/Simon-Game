@@ -236,3 +236,62 @@ function winGame () {
     on = false;
     win = true;
 }
+
+/* SETTINGS MENU FUNCTIONS */
+let head = document.getElementById('header');
+let content = document.getElementById('settings-menu');
+
+function toggleMenu(){
+    if (content.className == 'settings-options') {
+        //OPEN MENU
+        content.className = 'settings-options-open';
+        head.className = 'settings-header-open';
+    } else {
+        //CLOSE MENU
+        content.className = 'settings-options';
+        head.className = 'settings-header';
+    }
+};
+
+/* CHANGE NAME MODAL */
+
+let modal = document.getElementById('simple-modal');
+
+function toggleNameModal() {
+    modal.style.display = "block";
+}
+
+function closeNameModal() {
+    modal.style.display = 'none';
+}
+
+/* THEMES MODAL */
+
+let themeModal = document.getElementById('theme-modal');
+
+function toggleThemeModal() {
+    themeModal.style.display = 'block';
+};
+
+function closeThemeModal() {
+    themeModal.style.display = 'none';
+}
+
+/* SET THEMES */
+
+let body = document.getElementById('themeBackground');
+
+function setSpookyTheme() {
+    body.className = 'spooky';    
+    closeThemeModal();
+}
+
+function setRegularTheme() {
+    body.className = 'regular';    
+    closeThemeModal();
+}
+
+function setChristmasTheme() {
+    body.className = 'christmas';    
+    closeThemeModal();
+}

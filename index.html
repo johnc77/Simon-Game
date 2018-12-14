@@ -10,6 +10,9 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 <!-- In the original code the source tag has a closing tag-->
     <audio id="clip1">
@@ -34,7 +37,57 @@
 
 </head>
 
-<body>
+<body class="regular" id="themeBackground">
+    <!-- MODALS FOR SETTINGS -->
+    <div id="simple-modal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn" onclick="closeNameModal()">&times;</span>
+            <p>Hello Im a modal</p>
+        </div>
+    </div>
+
+
+    <div id="theme-modal" class="themeModal">
+            <div class="theme-modal-content">
+                <span class="themecloseBtn" onclick="closeThemeModal()">&times;</span>
+                <ul>
+                    <li><span onclick="setChristmasTheme()">Christmas</span></li>
+                    <li><span onclick="setSpookyTheme()">Spooky</span></li>
+                    <li><span onclick="setRegularTheme()">Regular</span></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+    <div class="settings">
+
+        <div class="settings-header" id="header">
+            <span class = "icon" onclick="toggleMenu()"><i class="fas fa-cog"></i></span><span class = "settings-title">Settings</span>
+        </div>
+
+        <div class="settings-options" id="settings-menu">
+            <span class="name">Change Name</span>
+            <span class=""><i class="fas fa-bars nameIcon" onclick="toggleNameModal()"></i></span>
+
+            <span class="theme">Change Theme</span>
+            <span class=""><i class="fas fa-bars themeIcon" onclick="toggleThemeModal()"></i></span>
+
+
+            <span class="sound">Sound Effects</span>
+
+            <span class="mylabel">
+                <input type="checkbox" id="sounds">
+                <div class="slidingGrove"></div>
+                <label for="sounds" name="slider" class="mylabel"></label>
+            </span>
+
+
+        </div>
+    </div>
+
+
     <div id="outer-circle">
         <div id="topleft"></div>
         <div id="topright"></div>

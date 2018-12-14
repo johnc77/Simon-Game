@@ -1,9 +1,20 @@
 /* CSS COMPLETED */
 
-body {
+.regular {
     background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png)
+}
+
+.spooky{
+    background-image: url(../media/themes/spooky.jpg);
+    background-position: center;
+    background-size: cover;
   }
-  
+
+  .christmas{
+    background-image: url(../media/themes/christmas.jpg);
+    background-position: center;
+    background-size: cover;
+  }
 
 /*CIRCLE, SEGMENTS AND GAME MAIN BODY*/
 
@@ -171,4 +182,232 @@ SWITCHES AND COUNTER BELOW*/
     text-align: center;
     vertical-align: middle;
     line-height: 30px;
+}
+
+/* SETTINGS MENU  */
+
+.settings {
+    width: 20%;
+    float: left;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: 35px;
+    margin-left: 10px;
+    font-size: 1.5em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.settings-header-open {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: 35px;
+    margin-left: 10px;
+    font-size: 1.5em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.settings-title {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.icon {
+    margin: auto 10px auto 20px;
+    cursor: pointer;
+}
+
+/* HIDDEN MENU STYLING */
+
+.settings-options {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 100%;
+    max-height: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-left: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 0px;
+    transition: max-height padding-top 0.9s;
+    -moz-transition: max-height padding-top 0.9s;
+    -webkit-transition: max-height padding-top 0.9s;
+    overflow-x: hidden;
+}
+
+.settings-options-open {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 4fr 1fr;
+    width: 100%;
+    max-height: 200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-left: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 10px;
+    z-index: 1;
+    transition: max-height padding-top 0.9s;
+    -moz-transition: max-height padding-top 0.9s;
+    -webkit-transition: max-height padding-top 0.9s;
+}
+
+.name, .theme, .sound {
+    padding: 5px 0 5px 20px;
+    /* height: 30px; */
+    justify-self: start;
+    align-self: center;
+}
+
+
+/* MENU ICON STYLING */
+
+.nameIcon, .themeIcon {
+    cursor: pointer;
+    /* justify-self: center
+    align-self: center; */
+}
+
+/* NAME MODAL STYLING */
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* THEME MODAL STYLING */
+
+.themeModal{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 10px 20px 20px 20px;
+    width: 30%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.theme-modal-content ul{
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+.theme-modal-content ul li span{
+    cursor: pointer;
+}
+
+.themecloseBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    align-self: flex-end;
+}
+
+.themecloseBtn:hover, .themecloseBtn:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* SLIDER BUTTON STYLING */
+
+.mylabel {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    /* margin-bottom: 15px; */
+}
+
+
+.mylabel input {
+    display: none;
+}
+
+.slidingGrove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ababab;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.slidingGrove::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+input:checked + .slidingGrove{
+    background: #5fc580;
+}
+
+input:checked + .slidingGrove::after{
+    transform: translateX(20px);
 }
